@@ -1,0 +1,108 @@
+import type { Snapshot } from "./types";
+// Fictional venues, explicitly identified as demonstration content in the UI.
+export const demoSnapshot: Snapshot = {
+  pubs: [
+    {
+      id: "beco",
+      name: "Boteco do Beco",
+      neighborhood: "Cidade Baixa",
+      address: "Cidade Baixa, Porto Alegre · endereço de demonstração",
+      description:
+        "Luz baixa, mesa de madeira e aquela conversa que faz a noite passar sem ver. Um boteco pra chamar de teu.",
+      image: "/assets/pub-interior.webp",
+      lat: -30.0418,
+      lng: -51.2186,
+      tags: ["Boteco", "Chopp", "Rock & blues"],
+      active: true,
+    },
+    {
+      id: "quintal",
+      name: "Quintal da Boa",
+      neighborhood: "Bom Fim",
+      address: "Bom Fim, Porto Alegre · endereço de demonstração",
+      description:
+        "Um quintal iluminado, petiscos pra dividir e um brinde ao fim do dia. Aqui sempre cabe mais um amigo.",
+      image: "/assets/pub-courtyard.webp",
+      lat: -30.0297,
+      lng: -51.2128,
+      tags: ["Ao ar livre", "Petiscos", "MPB"],
+      active: true,
+    },
+    {
+      id: "santo",
+      name: "Santo Copo",
+      neighborhood: "Moinhos de Vento",
+      address: "Moinhos de Vento, Porto Alegre · endereço de demonstração",
+      description:
+        "Chopp bem tirado, bons encontros e música na medida certa. Escolhe tua mesa e deixa o resto com a noite.",
+      image: "/assets/beer-toast.webp",
+      lat: -30.0255,
+      lng: -51.1997,
+      tags: ["Pub", "Drinks", "Chopp artesanal"],
+      active: true,
+    },
+  ],
+  offers: [
+    {
+      id: "beco-2x1",
+      pub_id: "beco",
+      title: "Pediu um, brindou dois.",
+      subtitle: "Chopp Pilsen 500 ml em dobro",
+      description:
+        "Peça um chopp Pilsen de 500 ml e ganhe outro do mesmo tamanho. Um bom motivo pra chamar companhia.",
+      category: "Chopp em dobro",
+      rule: "Uma utilização por pessoa, por dia. Validar antes do pedido. Não cumulativo com outras ofertas.",
+      days: [0, 1, 2, 3, 4, 5, 6],
+      start_time: "00:00",
+      end_time: "23:59",
+      daily_limit: 30,
+      active: true,
+    },
+    {
+      id: "quintal-petiscos",
+      pub_id: "quintal",
+      title: "A mesa inteira agradece.",
+      subtitle: "20% de desconto nos petiscos",
+      description:
+        "Escolhe teu petisco favorito e aproveita 20% de desconto em uma porção para dividir com a turma.",
+      category: "Petiscos",
+      rule: "Válido para uma porção de petisco. Uma utilização por pessoa, por dia. Validar antes do pedido.",
+      days: [0, 1, 2, 3, 4, 5, 6],
+      start_time: "00:00",
+      end_time: "23:59",
+      daily_limit: 20,
+      active: true,
+    },
+    {
+      id: "santo-happy",
+      pub_id: "santo",
+      title: "O primeiro brinde é especial.",
+      subtitle: "15% na tua primeira visita",
+      description:
+        "Chega mais: na primeira utilização desta oferta, teu pedido ganha 15% de desconto, limitado a R$ 30.",
+      category: "Primeira visita",
+      rule: "Uma utilização por cadastro nesta oferta. Desconto máximo de R$ 30. Validar antes do pagamento.",
+      days: [0, 1, 2, 3, 4, 5, 6],
+      start_time: "00:00",
+      end_time: "23:59",
+      daily_limit: 15,
+      active: true,
+    },
+    {
+      id: "beco-happy",
+      pub_id: "beco",
+      title: "Happy hour com gosto de encontro.",
+      subtitle: "20% de desconto no chopp",
+      description:
+        "Teu chopp fica mais em conta para aproveitar o encontro com calma.",
+      category: "Happy hour",
+      rule: "Desconto em um chopp. Uma utilização por pessoa, por dia. Validar antes do pedido.",
+      days: [0, 1, 2, 3, 4, 5, 6],
+      start_time: "00:00",
+      end_time: "23:59",
+      daily_limit: 25,
+      active: true,
+    },
+  ],
+  redemptions: [],
+};
